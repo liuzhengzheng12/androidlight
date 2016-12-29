@@ -278,6 +278,14 @@ public class MainActivity extends Activity implements
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_item_help:
+                new AlertDialog.Builder(this)
+                        .setTitle("androidlight帮助")
+                        .setMessage(R.string.help_info)
+                        .setPositiveButton(R.string.btn_ok, null)
+                        .setNegativeButton(R.string.btn_exit, null)
+                        .show();
+                return true;
             case R.id.menu_item_about:
                 new AlertDialog.Builder(this)
                         .setTitle(getString(R.string.app_name) + getVersionName())
